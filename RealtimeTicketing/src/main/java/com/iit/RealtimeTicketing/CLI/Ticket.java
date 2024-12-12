@@ -1,4 +1,4 @@
-package com.iit.CLI;
+package com.iit.RealtimeTicketing.CLI;
 
 import java.math.BigDecimal;
 

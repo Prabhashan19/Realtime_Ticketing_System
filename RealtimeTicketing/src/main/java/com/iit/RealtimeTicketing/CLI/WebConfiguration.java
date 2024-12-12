@@ -1,15 +1,14 @@
-package com.iit.CLI;
+package com.iit.RealtimeTicketing.CLI;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.io.File;
 import java.io.IOException;
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 
 public class WebConfiguration {
     private int totalTickets;
@@ -17,17 +16,6 @@ public class WebConfiguration {
     private int customerRetrievalRate;
     private int maxTicketCapacity;
 
-     //Default Constructor
-//    public WebConfiguration() {
-//    }
-
-    // Parameterized Constructor
-//    public WebConfiguration(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maxTicketCapacity) {
-//        this.totalTickets = totalTickets;
-//        this.ticketReleaseRate = ticketReleaseRate;
-//        this.customerRetrievalRate = customerRetrievalRate;
-//        this.maxTicketCapacity = maxTicketCapacity;
-//    }
 
     // Getters and Setters
     public int getTotalTickets() {
@@ -69,7 +57,7 @@ public class WebConfiguration {
             return false;
         }
         if (totalTickets > maxTicketCapacity) {
-            System.out.println("Total number of tickets can't exceed the maximum allowed ticket capacity");
+            System.out.println("Total number of tickets can't exceed the maximum ticket capacity");
             return false;
         }
         return true;

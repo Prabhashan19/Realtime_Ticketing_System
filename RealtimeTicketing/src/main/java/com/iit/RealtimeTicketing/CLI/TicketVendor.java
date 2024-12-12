@@ -1,11 +1,11 @@
-package com.iit.CLI;
+package com.iit.RealtimeTicketing.CLI;
 
 import java.math.BigDecimal;
 
 public class TicketVendor implements Runnable {
-    private TicketPool ticketPool; // The TicketPool which is shared among Vendors and Customers
-    private int totalTickets; // Total number of tickets, A Ticket vendor will sell
-    private int ticketReleaseRate; // Frequency of tickets will be added to the pool
+    private final TicketPool ticketPool; // The TicketPool which is shared among Vendors and Customers
+    private final int totalTickets; // Total number of tickets, A Ticket vendor will sell
+    private final int ticketReleaseRate; // Frequency of tickets will be added to the pool
 
     public TicketVendor(TicketPool ticketPool, int totalTickets, int ticketReleaseRate) {
         this.ticketPool = ticketPool;
@@ -17,7 +17,7 @@ public class TicketVendor implements Runnable {
     // Runnable interface should write the implementation for Runnable interface
     @Override
     public void run(){
-        for (int i = 1; i <= totalTickets; i++) { // i is used an an id
+        for (int i = 1; i <= totalTickets; i++) { //  is used an id
             Ticket ticket = new Ticket(i, "Sample Event", new BigDecimal(1000));
             ticketPool.addTickets(ticket); // Method in Ticket pool to add tickets
 

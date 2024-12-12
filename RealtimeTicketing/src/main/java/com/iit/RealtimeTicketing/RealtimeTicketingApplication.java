@@ -22,7 +22,7 @@ public class RealtimeTicketingApplication implements CommandLineRunner {
 
 		while (running) {
 			System.out.println("\nChoose an option:");
-			System.out.println("1. Run Main Simulation");
+			System.out.println("1. Run Real-Time Ticket System");
 			System.out.println("2. Exit");
 			System.out.print("Enter your choice: ");
 			int choice = scanner.nextInt();

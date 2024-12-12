@@ -1,6 +1,5 @@
 package com.iit.RealtimeTicketing.CLI;
 
-import java.util.*;
 
 public class TicketPool {
 //    private static List<Ticket> ticketList;
@@ -9,7 +8,7 @@ public class TicketPool {
 
     public TicketPool(int maximumCapacity) {
         this.maximumCapacity = maximumCapacity;
-//        this.ticketList = ticketList;
+
 //        ticketList = Collections.synchronizedList(new ArrayList<>()); // Synchronized List For tickets
         SystemLogger.logInfo("TicketPool initialized with maximum ticket capacity: " + maximumCapacity);
     }

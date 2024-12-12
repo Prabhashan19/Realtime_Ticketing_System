@@ -24,7 +24,7 @@ public class TicketVendor implements Runnable {
             // The ticket release frequency means the delay
             // We should convert the value in S to ms
             try {
-                Thread.sleep(ticketReleaseRate * 1000);
+                Thread.sleep(ticketReleaseRate * 1000L);
             }
             catch (InterruptedException e) {
                 throw new RuntimeException(e.getMessage());
